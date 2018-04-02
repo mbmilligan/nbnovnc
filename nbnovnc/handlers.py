@@ -24,7 +24,7 @@ priority = 3
 hooks.after_start = nbnovnc.circus.sleep
 
 [watcher:websockify]
-cmd = websockify --web /usr/share/novnc/ {port} localhost:5900
+cmd = websockify --web /usr/share/novnc/ --heartbeat 58 {port} localhost:5900
 numprocesses = 1
 priority = 2
 
