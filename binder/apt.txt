@@ -1,7 +1,4 @@
 novnc
 websockify
-x11vnc
-xfonts-base
-xvfb
-xterm
-openbox
+tightvncserver
+xfce4

@@ -12,29 +12,37 @@ class NoVNCHandler(SuperviseAndProxyHandler):
     conf_tmpl = """
 [circus]
 
-[watcher:Xvfb]
-cmd = Xvfb :0 -screen 0 1024x768x24
+[watcher:tightvnc]
+cmd = tightvncserver -geometry 1200x1024 :0
 numprocesses = 1
-priority = 4
+priority = 10
+respawn = False
+warmup_delay = 3
+copy_env = True
 
-[watcher:x11vnc]
-cmd = x11vnc -loop
-numprocesses = 1
-priority = 3
-hooks.after_start = nbnovnc.circus.sleep
+# [watcher:Xvfb]
+# cmd = Xvfb :0 -screen 0 1024x768x24
+# numprocesses = 1
+# priority = 4
+
+# [watcher:x11vnc]
+# cmd = x11vnc -loop
+# numprocesses = 1
+# priority = 3
+# hooks.after_start = nbnovnc.circus.sleep
 
 [watcher:websockify]
 cmd = websockify --web /usr/share/novnc/ {port} localhost:5900
 numprocesses = 1
 priority = 2
 
-[watcher:windowmanager]
-cmd = openbox --startup .config/openbox/autostart
-numprocesses = 1
-priority = 1
-copy_env = True
+# [watcher:windowmanager]
+# cmd = openbox --startup .config/openbox/autostart
+# numprocesses = 1
+# priority = 1
+# copy_env = True
 
-[env:windowmanager]
+[env:tightvnc]
 DISPLAY = :0
 """
 
