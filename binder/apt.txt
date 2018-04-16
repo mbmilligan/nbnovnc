@@ -2,3 +2,4 @@ novnc
 websockify
 tightvncserver
 xfce4
+xfonts-base
