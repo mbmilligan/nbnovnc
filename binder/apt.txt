@@ -5,9 +5,14 @@ xfce4
 xfce4-terminal
 xfonts-base
 xfonts-scalable
+x11-apps
+x11-session-utils
+x11-utils
+x11-xserver-utils
+xauth
+xfonts-utils
+xinput
 dbus-x11
 desktop-base
 tango-icon-theme
-xorg
-x11-xserver-utils
 spyder3
