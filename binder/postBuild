@@ -5,3 +5,4 @@ jupyter nbextension     install --py nbnovnc --sys-prefix
 jupyter nbextension     enable  --py nbnovnc --sys-prefix
 
 chmod 600 .vnc/passwd
+chmod 700 .vnc/xstartup

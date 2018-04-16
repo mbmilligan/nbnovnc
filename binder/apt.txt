@@ -3,3 +3,4 @@ websockify
 tightvncserver
 xfce4
 xfonts-base
+dbus-x11
