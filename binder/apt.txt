@@ -2,5 +2,12 @@ novnc
 websockify
 tightvncserver
 xfce4
+xfce4-terminal
 xfonts-base
+xfonts-scalable
 dbus-x11
+desktop-base
+tango-icon-theme
+xorg
+x11-xserver-utils
+spyder3
